@@ -20,4 +20,12 @@ ingredients["drinks"].each do |ingredient|
   Ingredient.create(name: ingredient["strIngredient1"])
 end
 
+puts "Creating cocktails..."
+Cocktail.create(name: "Mojito Classic")
+Cocktail.create(name: "Mojito Royal")
+Cocktail.create(name: "Caipirinha")
+Cocktail.create(name: "Cuba Libre")
+Cocktail.create(name: "Pina Colada")
+Cocktail.create(name: "Americano")
+
 puts 'Finished!'
