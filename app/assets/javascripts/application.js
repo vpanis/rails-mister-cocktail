@@ -15,3 +15,7 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+
+$('#dose_ingredient').autocomplete
+    source: JSON.parse($('#dose_ingredient').data('autocomplete-source'))

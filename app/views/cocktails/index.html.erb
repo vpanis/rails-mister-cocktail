@@ -1,3 +1,29 @@
-<% @cocktails.each do |cocktail| %>
-  <%= link_to cocktail.name, cocktail_path(cocktail) %>
-<% end %>
+
+<div class="container">
+
+  <h1 class="text-center">Retrouvez vos cocktails favoris</h1>
+
+  <div><%= link_to "Ajouter un cocktail", new_cocktail_path, {class: "btn btn-danger"} %></div>
+
+  <div class="row">
+
+    <% @cocktails.each do |cocktail| %>
+
+      <div class="col-xs-12 col-md-4">
+
+        <div class="card marged" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('background.jpg');">
+          <div class="card-category">Cocktail</div>
+          <div class="card-description">
+            <h2><%= cocktail.name %></h2>
+          </div>
+          <%= link_to "", cocktail_path(cocktail), {class: "card-link"} %>
+        </div>
+
+      </div>
+
+    <% end %>
+
+  </div>
+</div>
+
+
